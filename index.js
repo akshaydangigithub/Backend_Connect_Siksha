@@ -7,6 +7,9 @@ const port = 8080;
 
 connectDB();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (request, response) => {
   response.send("Hello World");
 });
